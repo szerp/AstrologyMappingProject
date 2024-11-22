@@ -18,62 +18,59 @@ from PyQt5.QtGui import QFont, QIcon  # Add QIcon here
 # Define the pastel magical girl color map
 PASTEL_MAGICAL_GIRL_COLORS = {
     # General Text and Background
-    "#000000": "#000000",  # Text → Black for sharp readability
-    "#ffffff": "#FFF1FA",  # White → Brighter pastel pink-white
+    "#000000": "#000000",  # Text → Black for sharp readability (used for all text)
+    "#ffffff": "#ffffff",  # White → White (background color)
 
     # Wheel Colors
-    "#0000ff": "#7FBFFF",  # Blue → Brighter pastel blue
-    "#06537f": "#A3E8FF",  # Dark teal → Brighter pastel aqua
-    "#124500": "#98FF98",  # Dark green → Bright pastel green (Earth)
-    "#150052": "#D4B8FF",  # Deep purple → Brighter pastel lavender
-    "#160": "#FFB0C8",     # Dark olive → Brighter blush pink
-    "#176": "#FFB0C8",     # Olive → Brighter blush pink
-    "#1f99b3": "#A3E8FF",  # Teal → Brighter pastel aqua
-    "#26bbcf": "#8FD3FF",  # Cyan → Brighter pastel sky blue
-    "#2b4972": "#A7CFFF",  # Navy → Brighter pastel periwinkle
+    "#0000ff": "#7FBFFF",  # Blue → Brighter pastel blue (used for Air signs)
+    "#06537f": "#06537f",  # Dark teal → Dark teal (used for Water signs)
+    "#124500": "#124500",  # Dark green → Dark green (used for Earth signs)
+    "#150052": "#DB6EC0",  # Deep purple → Brighter pastel lavender (used for House lines)
+    "#160": "#DB6EC0",     # Dark olive → Brighter blush pink (used for Fire signs)
+    "#176": "#DB6EC0",     # Olive → Brighter blush pink (used for Fire signs)
+    "#1f99b3": "#DB6EC0",  # Teal → Brighter pastel aqua (used for Water signs)
+    "#26bbcf": "#8FD3FF",  # Cyan → Brighter pastel sky blue (used for Air signs)
+    "#2b4972": "#A7CFFF",  # Navy → Brighter pastel periwinkle (used for Water elements)
 
     # Earth Element (Greens)
-    "#36d100": "#387038",  # Bright green → Forest green (Earth)
-    "#666f06": "#387038",  # Olive green → Bright pastel green (Earth)
-    "#6a2d04": "#387038",  # Reddish-brown → Bright pastel green (Earth)
-    "#6b3d00": "#387038",  # Dark orange → Bright pastel green (Earth)
-    "#713f04": "#387038",  # Deep orange → Bright pastel green (Earth)
-    "#7a9810": "#387038",  # Olive → Bright pastel green (Earth)
-    "#984b00": "#387038",  # Orange-brown → Bright pastel green (Earth)
-    "#985a10": "#387038",  # Burnt orange → Bright pastel green (Earth)
+    "#36d100": "#387038",  # Bright green → Forest green (used for Earth symbols)
+    "#666f06": "#387038",  # Olive green → Forest green (used for Earth-related signs)
+    "#6a2d04": "#387038",  # Reddish-brown → Forest green (used for Earth elements)
+    "#6b3d00": "#387038",  # Dark orange → Forest green (used for Earth signs)
+    "#713f04": "#387038",  # Deep orange → Forest green (used for Earth-related aspects)
+    "#7a9810": "#387038",  # Olive → Forest green (used for Earth signs)
+    "#984b00": "#387038",  # Orange-brown → Forest green (used for Earth aspects)
+    "#985a10": "#387038",  # Burnt orange → Forest green (used for Earth symbols)
 
     # Air Element (Purples)
-    "#6f0766": "#A080FF",  # Dark magenta → Vibrant pastel purple (Air)
-    "#6f76d1": "#A080FF",  # Blue-purple → Vibrant pastel purple (Air)
-    "#810757": "#A080FF",  # Deep magenta → Vibrant pastel purple (Air)
-    "#510060": "#A080FF",  # Deep purple → Vibrant pastel purple (Air)
-    "#5757e2": "#A080FF",  # Bright blue → Vibrant pastel purple (Air)
-    "#630e73": "#A080FF",  # Dark purple → Vibrant pastel purple (Air)
+    "#6f0766": "#A080FF",  # Dark magenta → Vibrant pastel purple (used for Air symbols)
+    "#6f76d1": "#A080FF",  # Blue-purple → Vibrant pastel purple (used for Air-related signs)
+    "#810757": "#A080FF",  # Deep magenta → Vibrant pastel purple (used for Air aspects)
+    "#510060": "#A080FF",  # Deep purple → Vibrant pastel purple (used for Air symbols)
+    "#5757e2": "#A080FF",  # Bright blue → Vibrant pastel purple (used for Air-related elements)
+    "#630e73": "#A080FF",  # Dark purple → Vibrant pastel purple (used for Air aspects)
 
     # Fire Element (Reds)
-    "#F00": "#A52A2A",     # Bright red → Darker Brick Red
-    "#FF0000": "#FF9999",  # Red → Brighter peachy pink
-    "#ff7200": "#FFB0A8",  # Bright orange → Brighter coral pink
-    "#ff7e00": "#FFB0A8",  # Deep orange → Brighter coral pink
-    "#ff6600": "#FFB0A8",  # Orange → Brighter coral pink
+    "#F00": "#DB6EC0",     # Bright red → Darker Brick Red (used for Fire symbols)
+    "#FF0000": "#DB6EC0",  # Red → Brighter peachy pink (used for Fire-related elements)
+    "#ff7200": "#DB6EC0",  # Bright orange → Brighter coral pink (used for Fire signs)
+    "#ff7e00": "#DB6EC0",  # Deep orange → Brighter coral pink (used for Fire aspects)
+    "#ff6600": "#DB6EC0",  # Orange → Brighter coral pink (used for Fire symbols)
 
     # Water Element (Blues)
-    "#8FD3FF": "#375B73",  # Cyan → Deep Ocean Blue (Water Symbols)
-    "#2b4972": "#375B73",  # Navy → Deep Ocean Blue
+    "#8FD3FF": "#375B73",  # Cyan → Deep Ocean Blue (used for Water symbols)
+    "#2b4972": "#375B73",  # Navy → Deep Ocean Blue (used for Water-related signs)
 
     # House Dividing Lines (Neutral Gray)
-    "#404040": "#333333",  # Dark Gray Lines for subtle distinction
-
-    # House Numbers (Dark Neutral)
-    "#404040": "#000000",  # Pure Black for sharp contrast
+    "#404040": "#000000",  # Pure Black for sharp contrast (used for house dividing lines)
 
     # Miscellaneous (Signs, Points, Aspects)
-    "#b14e58": "#FFB8C8",  # Rosewood → Brighter salmon pink
-    "#d59e28": "#FFB8D2",  # Gold → Brighter pastel coral
-    "#dc0000": "#FF9999",  # Bright red → Brighter peachy pink
-    "#520800": "#FFB0A8",  # Brownish red → Brighter dusty rose
-    "#400052": "#D4B8FF",  # Deep violet → Brighter pastel lavender
-    "#47133d": "#FFAFD2",  # Wine → Brighter pastel coral
+    "#b14e58": "#DB6EC0",  # Rosewood → Brighter salmon pink (used for Venus and similar aspects)
+    "#d59e28": "#d59e28",  # Gold → Brighter pastel coral (used for Sun-related aspects)
+    "#dc0000": "#DB6EC0",  # Bright red → Brighter peachy pink (used for Mars and similar aspects)
+    "#520800": "#DB6EC0",  # Brownish red → Brighter dusty rose (used for Saturn aspects)
+    "#400052": "#DB6EC0",  # Deep violet → Brighter pastel lavender (used for Neptune aspects)
+    "#47133d": "#DB6EC0",  # Wine → Brighter pastel coral (used for Pluto aspects)
 }
 
 

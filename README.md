@@ -19,7 +19,7 @@ Designed for all skill levels, the app makes chart creation effortless and enjoy
 
 🎨 **Customizable Color Themes**  
 Includes the unique color palette, blending whimsy with elegance for beautifully styled charts.  
-Additionally the program will create a chart with the original Krekyon style for readability or in case another color palette is desired. 
+Additionally the program will create a chart with the original Kerykeion style for readability or in case another color palette is desired. 
 
 🪐 **Dynamic Chart Types**  
 Generate **Natal**, **Transit**, and **Synastry** charts with ease, tailored to user input.  
@@ -122,3 +122,107 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 
 Feel free to copy-paste this into your GitHub repository's README file and adjust as needed!
+
+---
+## 📖 **Instructions to Run the Astrology Chart Generator**
+
+Follow these steps to download and run the Astrology Chart Generator from this repository:
+Step 1: Install Python 3.9
+
+    This project is only compatible with Python 3.9.
+        Download and install Python 3.9 from the official Python website.
+        Important: During installation, check the box for "Add Python to PATH" to ensure Python is available in your terminal/command prompt.
+
+Step 2: Clone the Repository
+
+    Clone this repository to your local machine using Git or download it as a ZIP file:
+        Using Git:
+
+        git clone https://github.com/your-repository-name.git
+        cd your-repository-name
+
+        Downloading as ZIP:
+            Click the green "Code" button in the repository and select "Download ZIP".
+            Extract the ZIP file to your desired folder.
+
+Step 3: Install Required Dependencies
+
+    Open a terminal or command prompt in the directory where the repository is located.
+    Install the required Python libraries using pip:
+
+    pip install -r requirements.txt
+
+    This will install the necessary dependencies, including:
+
+        PyQt5
+
+        Kerykeion
+
+        Geopy
+
+        TimezoneFinder
+
+        Any other required libraries
+
+        Note: Ensure you are using Python 3.9 and not a different version.
+
+Step 4: Run the Application
+
+    Execute the main script to launch the application:
+
+    python AstroCharter.py
+
+    The app's graphical interface should appear. You can now start generating astrology charts!
+
+Step 5: Save and Access Generated Charts
+
+    Charts will be saved in the generated_charts folder by default.
+    You can change the save folder in the app settings or browse the default folder.
+
+🔧 Troubleshooting
+
+If you encounter issues, here are some tips:
+
+    Ensure all dependencies are installed. If pip install fails, ensure you are using Python 3.9 and try upgrading pip:
+
+    python -m pip install --upgrade pip
+
+    If location or timezone data fails, ensure you have a working internet connection.
+    For Mac and Linux users, replace python with python3.9 in commands.
+
+📦 Optional: Create a Virtual Environment
+
+To avoid conflicts with other Python projects, use a virtual environment:
+
+    Create a virtual environment:
+
+python -m venv env
+
+Activate the virtual environment:
+
+    On Windows:
+
+env\Scripts\activate
+
+On macOS/Linux:
+
+    source env/bin/activate
+
+Install dependencies in the virtual environment:
+
+    pip install -r requirements.txt
+
+💻 Compiling into an Executable File (EXE)
+
+If you are skilled in Python packaging and know how to compile Python into an executable file (EXE), I would be amazed and grateful if you could show me how to do it properly.
+
+I have attempted methods such as PyInstaller and auto-py-to-exe, but I encountered errors related to missing dependencies. If you successfully compile the application, please share the steps so I can include them in this repository. Thank you in advance! 🙏✨
+🌟 Feedback and Contributions
+
+If you encounter issues, have suggestions for improvement, or successfully compile the app into an executable, feel free to:
+
+    Open an issue
+    Submit a pull request
+    Share your experience or ideas
+
+Happy charting! ✨

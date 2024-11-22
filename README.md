@@ -101,6 +101,14 @@ Modify chart elements using pre-defined color mappings to match your personal ae
 **Sarahit Zerpa (Nyahmii)**    
 ---
 
+## **Powered by Kerykeion**
+    AstroChart Generator uses Kerykeion as the primary library for astrological calculations and chart generation.
+    Kerykeion is a Python library for astrology that provides robust functionalities for natal chart analysis, synastry, and other astrological features.
+
+    Kerykeion also supports SVG chart outputs, which we customized further to match the magical aesthetic of our application. A huge thank you to the contributors of Kerykeion for making astrology programming accessible and enjoyable.
+
+---
+
 ## 💖 **Support the Project**
 
 If you loved this project and want to see more magical features or new projects, consider [buying me a coffee on Ko-fi](https://ko-fi.com/yourusername). Your support helps keep this project alive and ✨ magical! ✨

@@ -1,0 +1,3 @@
+[console_scripts]
+create-docs=scripts.docs:main
+

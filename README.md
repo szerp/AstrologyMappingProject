@@ -138,8 +138,8 @@ Step 2: Clone the Repository
     Clone this repository to your local machine using Git or download it as a ZIP file:
         Using Git:
 
-        git clone https://github.com/your-repository-name.git
-        cd your-repository-name
+        git clone https://github.com/AstrologyMappingProject.git
+        cd AstrologyMappingProject
 
         Downloading as ZIP:
             Click the green "Code" button in the repository and select "Download ZIP".

@@ -124,105 +124,145 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Feel free to copy-paste this into your GitHub repository's README file and adjust as needed!
 
 ---
-## 📖 **Instructions to Run the Astrology Chart Generator**
+# Astrology Chart Generator: Instructions for Recreating and Building the App
 
-Follow these steps to download and run the Astrology Chart Generator from this repository:
-Step 1: Install Python 3.9
+This guide provides instructions for setting up the environment, running the application, and building both `default` and `onefile` executables using PyInstaller.
 
-    This project is only compatible with Python 3.9.
-        Download and install Python 3.9 from the official Python website.
-        Important: During installation, check the box for "Add Python to PATH" to ensure Python is available in your terminal/command prompt.
+---
+## **1️⃣ Setting Up the Python Environment**
 
-Step 2: Clone the Repository
+### 🛠️ Steps:
+1. **Install Anaconda or Miniconda**  
+   - Download and install Anaconda/Miniconda from [conda.io](https://www.anaconda.com/).
 
-    Clone this repository to your local machine using Git or download it as a ZIP file:
-        Using Git:
+2. **Create the Conda Environment**  
+   Open Anaconda Prompt and run:
+   ```bash
+   conda create -n AstrologyMappingPython39 python=3.9
 
-        git clone https://github.com/AstrologyMappingProject.git
-        cd AstrologyMappingProject
+3. **Activate the Environment**
 
-        Downloading as ZIP:
-            Click the green "Code" button in the repository and select "Download ZIP".
-            Extract the ZIP file to your desired folder.
+conda activate AstrologyMappingPython39
 
-Step 3: Install Required Dependencies
+4. **Install Dependencies**
+Install the required Python libraries:
 
-    Open a terminal or command prompt in the directory where the repository is located.
-    Install the required Python libraries using pip:
+pip install pyswisseph kerykeion PyQt5 geopy timezonefinder pyinstaller
 
-    pip install -r requirements.txt
+5.**Verify Installation**
+Run the following command to confirm all required libraries are installed:
 
-    This will install the necessary dependencies, including:
+pip show pyswisseph kerykeion PyQt5 geopy timezonefinder pyinstaller
 
-        PyQt5
+---
+## **2️⃣ Preparing the Code**
+### 📂 Steps:
 
-        Kerykeion
+    Save the Python Code
+        Save the AstroCharter.py file in your working directory:
 
-        Geopy
+        C:/Users/Nyahmii/Documents/AstrologyMappingProject/AstroCharter.py
 
-        TimezoneFinder
+    Place Supporting Files
+        Ensure the astrology_icon.ico file is present in the same directory.
 
-        Any other required libraries
+## **3️⃣ Building the Executables**
+### Option A: Default Build (Folder Output)
 
-        Note: Ensure you are using Python 3.9 and not a different version.
+    Save the Default Spec File
+    Save the AstroCharter-default.spec file in your working directory.
 
-Step 4: Run the Application
+    Run PyInstaller with the Default Spec
 
-    Execute the main script to launch the application:
+pyinstaller AstroCharter-default.spec --distpath builder_default --workpath build_default
 
-    python AstroCharter.py
+Output
+The executable will be located in:
 
-    The app's graphical interface should appear. You can now start generating astrology charts!
+    builder_default/AstroCharter/
 
-Step 5: Save and Access Generated Charts
+### Option B: Onefile Build (Single Executable)
 
-    Charts will be saved in the generated_charts folder by default.
-    You can change the save folder in the app settings or browse the default folder.
+    Save the Onefile Spec File
+    Save the AstroCharter-onefile.spec file in your working directory.
 
-🔧 Troubleshooting
+    Run PyInstaller with the Onefile Spec
 
-If you encounter issues, here are some tips:
+pyinstaller AstroCharter-onefile.spec --distpath builder_onefile --workpath build_onefile
 
-    Ensure all dependencies are installed. If pip install fails, ensure you are using Python 3.9 and try upgrading pip:
+Output
+The single executable will be located in:
 
-    python -m pip install --upgrade pip
+    builder_onefile/
 
-    If location or timezone data fails, ensure you have a working internet connection.
-    For Mac and Linux users, replace python with python3.9 in commands.
+## **4️⃣ File Structure for Bundling Resources**
 
-📦 Optional: Create a Virtual Environment
+Ensure the datas section in both .spec files includes all necessary paths. For the kerykeion package, the required directories are:
 
-To avoid conflicts with other Python projects, use a virtual environment:
+    kerykeion/sweph
+    kerykeion/settings
 
-    Create a virtual environment:
+Example datas section in a .spec file:
 
-python -m venv env
+datas=[
+    ('C:/Users/<User_Name>/anaconda3/envs/AstrologyMappingPython39/lib/site-packages/kerykeion', 'kerykeion'),
+],
 
-Activate the virtual environment:
+## **5️⃣ Debugging and Improvements**
+### 🛠️ Common Issues and Fixes:
 
-    On Windows:
+    Error Handling for Missing Files
+    If you encounter missing files like seas_18.se1, verify the paths in the datas section of the .spec file and ensure they are correctly included in the build.
 
-env\Scripts\activate
+    Runtime Issues
+    If the app has runtime issues with the onefile build, consider using the --onedir build instead to keep files unpacked.
 
-On macOS/Linux:
+    Console vs. GUI
+    Ensure console=False in the EXE section of the .spec file to avoid opening a console window for the GUI application.
 
-    source env/bin/activate
+## **6️⃣ Folder Structure After Builds**
+### Default Build:
 
-Install dependencies in the virtual environment:
+builder_default/
+    AstroCharter/
+        AstroCharter.exe
 
-    pip install -r requirements.txt
+Onefile Build:
 
-💻 Compiling into an Executable File (EXE)
+builder_onefile/
+    AstroCharterApp.exe
 
-If you are skilled in Python packaging and know how to compile Python into an executable file (EXE), I would be amazed and grateful if you could show me how to do it properly.
+## **7️⃣ Running the Application**
+### 🚀 Steps to Run:
 
-I have attempted methods such as PyInstaller and auto-py-to-exe, but I encountered errors related to missing dependencies. If you successfully compile the application, please share the steps so I can include them in this repository. Thank you in advance! 🙏✨
-🌟 Feedback and Contributions
+    Default Build:
+    Navigate to:
+
+builder_default/AstroCharter/AstroCharter.exe
+
+Onefile Build:
+Navigate to:
+
+    builder_onefile/AstroCharterApp.exe
+
+## **8️⃣ Final Notes**
+### 📌 Recommendations:
+
+    Test Both Executables
+    Always test both default and onefile builds to ensure all dependencies are included and the application runs correctly.
+
+    Preserve Spec Files
+    Keep backups of .spec files in case of overwrites or future updates.
+
+    Separate Builds
+    Use distinct --distpath and --workpath values for different build types to avoid overwriting files.
+
+## **🎉 Contributing and Feedback**
 
 If you encounter issues, have suggestions for improvement, or successfully compile the app into an executable, feel free to:
 
-    Open an issue
-    Submit a pull request
-    Share your experience or ideas
+    Open an issue 💬
+    Submit a pull request 📂
+    Share your experience or ideas 📝
 
-Happy charting! ✨
+Happy charting! ✨🌌

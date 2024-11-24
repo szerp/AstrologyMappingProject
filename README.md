@@ -5,6 +5,30 @@ Welcome to **Astrology Chart Generator**, a magical desktop application designed
 [💖 Support the Project on Ko-fi! 💖](https://ko-fi.com/nyahmii)
 
 ---
+## **🚀 Prebuilt Executables**
+
+If you'd prefer to skip the build process, you can download the prebuilt executables directly from this repository:
+### Where to Find the Prebuilt Executables
+
+    Navigate to the Releases section of this repository.
+    Download the ZIP file corresponding to the build you want:
+        Default Build: Contains all the files required to run the app in a folder structure.
+        Onefile Build: A single executable file for convenience.
+    Unzip the downloaded file to your desired location.
+
+### How to Run the Prebuilt Executables
+
+####    Default Build:
+        Navigate to the dist_default/AstroCharter folder.
+        Double-click the AstroCharter.exe file to launch the app.
+
+####    Onefile Build:
+        Navigate to the dist_onefile folder.
+        Double-click the AstroCharterApp.exe file to launch the app.
+
+#####    💡 Note: Make sure you have the required permissions to execute files on your system.
+
+---
 
 ## 🌌 **Problem Statement**
 
